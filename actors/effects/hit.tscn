@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://b87ylhge3mjfg"]
+
+[ext_resource type="Texture2D" uid="uid://k2rstg6v5r72" path="res://sprites/sheets/hit_effect_anim_spritesheet.png" id="1_0icex"]
+[ext_resource type="Script" path="res://actors/effects/hit.gd" id="2_pi71s"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wre1c"]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_s0rbw"]
+lifetime_randomness = 0.8
+emission_shape = 1
+emission_sphere_radius = 8.0
+particle_flag_disable_z = true
+spread = 180.0
+flatness = 1.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 20.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 0.9
+scale_max = 1.1
+color = Color(1, 1, 1, 0.784314)
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+
+[node name="hitParticles" type="GPUParticles2D"]
+material = SubResource("CanvasItemMaterial_wre1c")
+amount = 16
+process_material = SubResource("ParticleProcessMaterial_s0rbw")
+texture = ExtResource("1_0icex")
+lifetime = 0.5
+explosiveness = 1.0
+script = ExtResource("2_pi71s")

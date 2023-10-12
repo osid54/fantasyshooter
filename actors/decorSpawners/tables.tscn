@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfftcrkqxvkcv"]
+
+[ext_resource type="Script" path="res://actors/decorSpawners/tables.gd" id="1_c53y4"]
+[ext_resource type="PackedScene" uid="uid://bicipaj6ugnnv" path="res://actors/decor/tableSmall.tscn" id="2_cnvps"]
+
+[node name="tables" type="Node2D"]
+script = ExtResource("1_c53y4")
+
+[node name="tableSmall" parent="." instance=ExtResource("2_cnvps")]
+position = Vector2(-9, 0)
+
+[node name="tableSmall2" parent="." instance=ExtResource("2_cnvps")]
+position = Vector2(8, 0)

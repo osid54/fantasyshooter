@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgd3872gh158h"]
+
+[ext_resource type="Texture2D" uid="uid://dyxh3dky8y2e2" path="res://sprites/sheets/enemy_afterdead_explosion_anim_spritesheet.png" id="1_3se26"]
+[ext_resource type="Script" path="res://actors/effects/death.gd" id="2_0cnag"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8jd7u"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_17kia"]
+lifetime_randomness = 0.8
+particle_flag_disable_z = true
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 15.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 0.9
+scale_max = 1.1
+color = Color(1, 1, 1, 0.745098)
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+
+[node name="deathParticles" type="GPUParticles2D"]
+z_index = 1
+y_sort_enabled = true
+material = SubResource("CanvasItemMaterial_8jd7u")
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_17kia")
+texture = ExtResource("1_3se26")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+script = ExtResource("2_0cnag")

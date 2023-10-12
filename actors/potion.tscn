@@ -1,0 +1,110 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4fxfrjhpo50y"]
+
+[ext_resource type="Script" path="res://actors/potion.gd" id="1_31cpd"]
+[ext_resource type="Texture2D" uid="uid://d0v0s3o64oodm" path="res://sprites/potion_red.png" id="2_emebt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fqv0d"]
+radius = 3.5
+height = 10.0
+
+[sub_resource type="Animation" id="Animation_3gvxp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-0.5, -1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_honrr"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -1), Vector2(0, 0), Vector2(0, -1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0), Vector2(0.5, 1), Vector2(0.5, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4ncw6"]
+_data = {
+"RESET": SubResource("Animation_3gvxp"),
+"idle": SubResource("Animation_honrr")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wt1ks"]
+radius = 32.0
+
+[node name="potion" type="Area2D"]
+z_index = 1
+collision_layer = 16
+script = ExtResource("1_31cpd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_emebt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1)
+shape = SubResource("CapsuleShape2D_fqv0d")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4ncw6")
+}
+
+[node name="range" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="range"]
+shape = SubResource("CircleShape2D_wt1ks")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+collision_mask = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, -1)
+shape = SubResource("CapsuleShape2D_fqv0d")
+
+[connection signal="body_entered" from="." to="." method="potionGet"]
+[connection signal="body_entered" from="range" to="." method="playerDetected"]
+[connection signal="body_exited" from="range" to="." method="playerLeft"]

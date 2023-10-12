@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhhlvptab405m"]
+
+[ext_resource type="Texture2D" uid="uid://omytjdr8nfrl" path="res://sprites/healthBar.png" id="1_dpg5r"]
+[ext_resource type="PackedScene" uid="uid://b26lc5iqwljkj" path="res://actors/healthSlot.tscn" id="2_nr45b"]
+[ext_resource type="Script" path="res://actors/healthBar.gd" id="2_qly76"]
+
+[node name="healthBar" type="TextureRect"]
+texture = ExtResource("1_dpg5r")
+script = ExtResource("2_qly76")
+
+[node name="healthSlot1" parent="." instance=ExtResource("2_nr45b")]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 4.0
+offset_right = 32.0
+offset_bottom = 11.0
+
+[node name="healthSlot2" parent="." instance=ExtResource("2_nr45b")]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 4.0
+offset_right = 47.0
+offset_bottom = 11.0
+
+[node name="healthSlot3" parent="." instance=ExtResource("2_nr45b")]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 4.0
+offset_right = 62.0
+offset_bottom = 11.0
+
+[node name="healthSlot4" parent="." instance=ExtResource("2_nr45b")]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 4.0
+offset_right = 77.0
+offset_bottom = 11.0
+
+[node name="healthSlot5" parent="." instance=ExtResource("2_nr45b")]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 4.0
+offset_right = 92.0
+offset_bottom = 11.0

@@ -1,0 +1,208 @@
+[gd_scene load_steps=26 format=3 uid="uid://dvvgapjvlupgk"]
+
+[ext_resource type="Script" path="res://actors/player.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://do4k0338bw8u2" path="res://actors/effects/heal.tscn" id="2_2g8re"]
+[ext_resource type="Texture2D" uid="uid://bgllre62ko117" path="res://sprites/sheets/knight_idle_spritesheet.png" id="2_ojfuw"]
+[ext_resource type="Texture2D" uid="uid://bicttv0vyhxgo" path="res://sprites/sheets/knight_run_spritesheet.png" id="3_eaaml"]
+[ext_resource type="PackedScene" uid="uid://155mui2qhl1y" path="res://actors/hand.tscn" id="5_cpwib"]
+[ext_resource type="Texture2D" uid="uid://dyxh3dky8y2e2" path="res://sprites/sheets/enemy_afterdead_explosion_anim_spritesheet.png" id="6_m4pcm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vxds"]
+atlas = ExtResource("2_ojfuw")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1e104"]
+atlas = ExtResource("2_ojfuw")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knghw"]
+atlas = ExtResource("2_ojfuw")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1i467"]
+atlas = ExtResource("2_ojfuw")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6gkv"]
+atlas = ExtResource("2_ojfuw")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jk2oa"]
+atlas = ExtResource("2_ojfuw")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7nju"]
+atlas = ExtResource("3_eaaml")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qlfs"]
+atlas = ExtResource("3_eaaml")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4w02b"]
+atlas = ExtResource("3_eaaml")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qha3f"]
+atlas = ExtResource("3_eaaml")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ga320"]
+atlas = ExtResource("3_eaaml")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vstv"]
+atlas = ExtResource("3_eaaml")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kcgkx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vxds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1e104")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knghw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1i467")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6gkv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jk2oa")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7nju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qlfs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4w02b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qha3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ga320")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vstv")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gss44"]
+size = Vector2(3.99997, 10)
+
+[sub_resource type="Animation" id="Animation_8fqk7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_70p74"]
+resource_name = "hit"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yse5r"]
+_data = {
+"RESET": SubResource("Animation_8fqk7"),
+"hit": SubResource("Animation_70p74")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_m405t"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ldagn"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 0.6
+scale_max = 0.7
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+z_index = 1
+collision_mask = 6
+motion_mode = 1
+script = ExtResource("1")
+speed = 75
+healParticles = ExtResource("2_2g8re")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+clip_children = 2
+sprite_frames = SubResource("SpriteFrames_kcgkx")
+animation = &"idle"
+
+[node name="ColorRect" type="ColorRect" parent="AnimatedSprite2D"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_gss44")
+
+[node name="Hand" parent="." instance=ExtResource("5_cpwib")]
+position = Vector2(0, 4)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yse5r")
+}
+
+[node name="dashParticles" type="GPUParticles2D" parent="."]
+modulate = Color(1, 1, 1, 0.784314)
+z_as_relative = false
+material = SubResource("CanvasItemMaterial_m405t")
+process_material = SubResource("ParticleProcessMaterial_ldagn")
+texture = ExtResource("6_m4pcm")
+lifetime = 0.5

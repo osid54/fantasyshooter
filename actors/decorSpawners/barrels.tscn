@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgs0cy0gcknts"]
+
+[ext_resource type="Script" path="res://actors/decorSpawners/barrels.gd" id="1_1tqtw"]
+[ext_resource type="PackedScene" uid="uid://bvxiyol5uj1ih" path="res://actors/decor/barrel.tscn" id="2_c7li2"]
+
+[node name="barrels" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_1tqtw")
+
+[node name="barrel" parent="." instance=ExtResource("2_c7li2")]
+position = Vector2(-6, -7)
+
+[node name="barrel2" parent="." instance=ExtResource("2_c7li2")]
+position = Vector2(7, -7)
+
+[node name="barrel3" parent="." instance=ExtResource("2_c7li2")]
+position = Vector2(7, 1)
+
+[node name="barrel4" parent="." instance=ExtResource("2_c7li2")]
+position = Vector2(-6, 1)

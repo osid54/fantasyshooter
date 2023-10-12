@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://p786btj5s727"]
+
+[ext_resource type="Texture2D" uid="uid://xtos4snfhhe4" path="res://sprites/decor/table_2.png" id="1_ngs4o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1os1e"]
+size = Vector2(1.7405, 10.6666)
+
+[node name="tableLarge" type="StaticBody2D"]
+z_index = 1
+y_sort_enabled = true
+collision_layer = 2
+collision_mask = 11
+
+[node name="tableLarge" type="Sprite2D" parent="."]
+texture = ExtResource("1_ngs4o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.43459e-05, 1.49998)
+rotation = 1.5708
+scale = Vector2(6.32, 3)
+shape = SubResource("RectangleShape2D_1os1e")

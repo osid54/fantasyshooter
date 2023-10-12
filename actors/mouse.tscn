@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2tif8h5ih2yu"]
+
+[ext_resource type="Texture2D" uid="uid://cit7kk26d3djx" path="res://sprites/crosshair.png" id="1_tbgxw"]
+[ext_resource type="Script" path="res://actors/Mouse.gd" id="2_qursg"]
+
+[node name="Mouse" type="Sprite2D"]
+z_index = 10
+texture = ExtResource("1_tbgxw")
+script = ExtResource("2_qursg")

@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://btty4rj8h0kt5"]
+
+[ext_resource type="Script" path="res://actors/pentagram.gd" id="1_u074m"]
+[ext_resource type="Texture2D" uid="uid://brck5sr6ryspn" path="res://sprites/penta/good/penta (1).png" id="3_i7jng"]
+[ext_resource type="PackedScene" uid="uid://b87ylhge3mjfg" path="res://actors/effects/hit.tscn" id="4_kpc5o"]
+
+[sub_resource type="Animation" id="Animation_4q31e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.509804, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_prkux"]
+resource_name = "glow"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.509804, 0, 0, 1), Color(0.984314, 0, 0, 1), Color(0.509804, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c3m12"]
+_data = {
+"RESET": SubResource("Animation_4q31e"),
+"glow": SubResource("Animation_prkux")
+}
+
+[node name="penta" type="Node2D"]
+modulate = Color(0.509804, 0, 0, 1)
+z_index = -1
+script = ExtResource("1_u074m")
+hitParticles = ExtResource("4_kpc5o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_i7jng")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_c3m12")
+}

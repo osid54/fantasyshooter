@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cspobuf41sm1w"]
+
+[ext_resource type="Script" path="res://actors/decorSpawners/bookshelves.gd" id="1_ginmc"]
+[ext_resource type="PackedScene" uid="uid://p30wdy7yo1bq" path="res://actors/decor/bookshelf.tscn" id="1_s4t83"]
+
+[node name="bookshelves" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_ginmc")
+
+[node name="bookshelf" parent="." instance=ExtResource("1_s4t83")]
+position = Vector2(-17, -6)
+
+[node name="bookshelf2" parent="." instance=ExtResource("1_s4t83")]
+position = Vector2(0, -6)
+
+[node name="bookshelf3" parent="." instance=ExtResource("1_s4t83")]
+position = Vector2(17, -6)

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8soodiyf0ry5"]
+
+[ext_resource type="Script" path="res://actors/decorSpawners/bigTable.gd" id="1_kaicd"]
+[ext_resource type="PackedScene" uid="uid://p786btj5s727" path="res://actors/decor/tableLarge.tscn" id="2_avtub"]
+
+[node name="bigTable" type="Node2D"]
+script = ExtResource("1_kaicd")
+
+[node name="tableLarge" parent="." instance=ExtResource("2_avtub")]
