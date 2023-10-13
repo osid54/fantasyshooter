@@ -1,0 +1,106 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1697173913
+default_env.tres::Environment::4001646256828817215::1697171017::0::1::::<><>::
+icon.png::CompressedTexture2D::2277480502264678925::1697171017::1697173914::1::::<><>::
+::res://actors/::1697171017
+chest.gd::GDScript::-1::1697171017::0::1::::<>StaticBody2D<>::
+chest.tscn::PackedScene::8714114669158626860::1697171017::0::1::::<><>::res://actors/chest.gd<>uid://bpvroi0jsvu32::::res://sprites/sheets/chest_spritesheet.png
+floorRandomizer.gd::GDScript::-1::1697171017::0::1::::<>TileMap<>::
+goblin.gd::GDScript::-1::1697171017::0::1::::<>CharacterBody2D<>::
+goblin.tscn::PackedScene::3823533463980377493::1697171017::0::1::::<><>::res://actors/goblin.gd<>uid://deotcnql1oiea::::res://sprites/sheets/goblin_idle_spritesheet.png<>uid://dgd3872gh158h::::res://actors/effects/death.tscn<>uid://bs4kxqxnh5s3o::::res://sprites/sheets/goblin_run_spritesheet.png<>uid://c4fxfrjhpo50y::::res://actors/potion.tscn
+hand.gd::GDScript::-1::1697171017::0::1::::<>Node2D<>::
+hand.tscn::PackedScene::1888685270594352720::1697171017::0::1::::<><>::uid://dojc03o08nruk::::res://sprites/hand.png<>uid://bxxfqk0qg3085::::res://actors/sword.tscn<>res://actors/hand.gd
+healthBar.gd::GDScript::-1::1697171017::0::1::::<>TextureRect<>::
+healthBar.tscn::PackedScene::7665740806620424356::1697171017::0::1::::<><>::uid://omytjdr8nfrl::::res://sprites/healthBar.png<>uid://b26lc5iqwljkj::::res://actors/healthSlot.tscn<>res://actors/healthBar.gd
+healthSlot.gd::GDScript::-1::1697171017::0::1::::<>ColorRect<>::
+healthSlot.tscn::PackedScene::4346188219619818297::1697171017::0::1::::<><>::res://actors/healthSlot.gd
+moreCam.gd::GDScript::-1::1697171017::0::1::::<>Camera2D<>::
+Mouse.gd::GDScript::-1::1697171017::0::1::::<>Sprite2D<>::
+mouse.tscn::PackedScene::9094080417003215720::1697171017::0::1::::<><>::uid://cit7kk26d3djx::::res://sprites/crosshair.png<>res://actors/Mouse.gd
+pentagram.gd::GDScript::-1::1697171017::0::1::::<>Node2D<>::
+pentagram.tscn::PackedScene::3760741794302399588::1697171017::0::1::::<><>::res://actors/pentagram.gd<>uid://brck5sr6ryspn::::res://sprites/penta/good/penta (1).png<>uid://b87ylhge3mjfg::::res://actors/effects/hit.tscn
+player.gd::GDScript::-1::1697171017::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::8676944804992976450::1697171017::0::1::::<><>::res://actors/player.gd<>uid://do4k0338bw8u2::::res://actors/effects/heal.tscn<>uid://bgllre62ko117::::res://sprites/sheets/knight_idle_spritesheet.png<>uid://bicttv0vyhxgo::::res://sprites/sheets/knight_run_spritesheet.png<>uid://155mui2qhl1y::::res://actors/hand.tscn<>uid://dyxh3dky8y2e2::::res://sprites/sheets/enemy_afterdead_explosion_anim_spritesheet.png
+potion.gd::GDScript::-1::1697171017::0::1::::<>Area2D<>::
+potion.tscn::PackedScene::6820046048601464290::1697171017::0::1::::<><>::res://actors/potion.gd<>uid://d0v0s3o64oodm::::res://sprites/potion_red.png
+projectile.gd::GDScript::-1::1697171017::0::1::::<>Area2D<>::
+projectile.tscn::PackedScene::2789914527395846771::1697171017::0::1::::<><>::res://actors/projectile.gd<>uid://q62xwomiqpqj::::res://sprites/sheets/slash_effect_anim_spritesheet.png
+sword.gd::GDScript::-1::1697171017::0::1::::<>Weapon<>::
+sword.tscn::PackedScene::4048577497967258596::1697171017::0::1::::<><>::res://actors/sword.gd<>uid://ct56ljs4egcr4::::res://sprites/weapon_sword_1.png<>uid://bf0pqqi4nb7o6::::res://actors/projectile.tscn
+weapon.gd::GDScript::-1::1697171017::0::1::::Weapon<>Node2D<>::
+::res://actors/decor/::1697171017
+barrel.tscn::PackedScene::3908396437140929287::1697171017::0::1::::<><>::uid://bm6aq2fb6h0w4::::res://sprites/decor/barrel.png
+bookshelf.tscn::PackedScene::1112192640101171210::1697171017::0::1::::<><>::uid://dgblvjeysnvp4::::res://sprites/decor/bookshelf.png
+tableLarge.tscn::PackedScene::1120951845397132038::1697171017::0::1::::<><>::uid://xtos4snfhhe4::::res://sprites/decor/table_2.png
+tableSmall.tscn::PackedScene::2952572726494900755::1697171017::0::1::::<><>::uid://bify0qaxrsux7::::res://sprites/decor/table.png
+::res://actors/decorSpawners/::1697171017
+barrels.gd::GDScript::-1::1697171017::0::1::::<>Node2D<>::
+barrels.tscn::PackedScene::5232656024650651580::1697171017::0::1::::<><>::res://actors/decorSpawners/barrels.gd<>uid://bvxiyol5uj1ih::::res://actors/decor/barrel.tscn
+bigTable.gd::GDScript::-1::1697171017::0::1::::<>Node2D<>::
+bigTable.tscn::PackedScene::7127107217054366506::1697171017::0::1::::<><>::res://actors/decorSpawners/bigTable.gd<>uid://p786btj5s727::::res://actors/decor/tableLarge.tscn
+bookshelves.gd::GDScript::-1::1697171017::0::1::::<>Node2D<>::
+bookshelves.tscn::PackedScene::6068059102418436298::1697171017::0::1::::<><>::res://actors/decorSpawners/bookshelves.gd<>uid://p30wdy7yo1bq::::res://actors/decor/bookshelf.tscn
+tables.gd::GDScript::-1::1697171017::0::1::::<>Node2D<>::
+tables.tscn::PackedScene::2748844894207470617::1697171017::0::1::::<><>::res://actors/decorSpawners/tables.gd<>uid://bicipaj6ugnnv::::res://actors/decor/tableSmall.tscn
+::res://actors/effects/::1697171017
+death.gd::GDScript::-1::1697171017::0::1::::<>GPUParticles2D<>::
+death.tscn::PackedScene::7588348975905947809::1697171017::0::1::::<><>::uid://dyxh3dky8y2e2::::res://sprites/sheets/enemy_afterdead_explosion_anim_spritesheet.png<>res://actors/effects/death.gd
+heal.gd::GDScript::-1::1697171017::0::1::::<>GPUParticles2D<>::
+heal.tscn::PackedScene::8202426147064713639::1697171017::0::1::::<><>::uid://k2rstg6v5r72::::res://sprites/sheets/hit_effect_anim_spritesheet.png<>res://actors/effects/heal.gd
+hit.gd::GDScript::-1::1697171017::0::1::::<>GPUParticles2D<>::
+hit.tscn::PackedScene::4770189840589350388::1697171017::0::1::::<><>::uid://k2rstg6v5r72::::res://sprites/sheets/hit_effect_anim_spritesheet.png<>res://actors/effects/hit.gd
+::res://scenes/::1697171017
+ColorRect.gd::GDScript::-1::1697171017::0::1::::<>TextureRect<>::
+main.tscn::PackedScene::4735595440520808663::1697171017::0::1::::<><>::uid://dn3bhirvjqcga::::res://themes/mainTileSet.tres<>res://actors/moreCam.gd<>res://themes/background.gdshader<>uid://dhhlvptab405m::::res://actors/healthBar.tscn<>uid://dvvgapjvlupgk::::res://actors/player.tscn<>res://actors/floorRandomizer.gd<>uid://d2tif8h5ih2yu::::res://actors/mouse.tscn<>res://scenes/objectSpawner.gd<>res://scenes/pentaSpawner.gd
+objectSpawner.gd::GDScript::-1::1697171017::0::1::::<>Node2D<>::
+pentaSpawner.gd::GDScript::-1::1697171017::0::1::::<>Node2D<>::
+::res://sprites/::1697171017
+crosshair.png::CompressedTexture2D::5375536663882004869::1697171017::1697173914::1::::<><>::
+empty.png::CompressedTexture2D::7019188615145033418::1697171017::1697173914::1::::<><>::
+hand.png::CompressedTexture2D::8160652834093031694::1697171017::1697173914::1::::<><>::
+healthBar.png::CompressedTexture2D::1008907960053342009::1697171017::1697173914::1::::<><>::
+potion_red.png::CompressedTexture2D::8958886637703702090::1697171017::1697173914::1::::<><>::
+sword2.png::CompressedTexture2D::2296831237279320720::1697171017::1697173914::1::::<><>::
+sword3.png::CompressedTexture2D::9152933610384963312::1697171017::1697173914::1::::<><>::
+sword4.png::CompressedTexture2D::4612250350001765805::1697171017::1697173914::1::::<><>::
+sword.png::CompressedTexture2D::3880633482557722845::1697171017::1697173914::1::::<><>::
+weapon_sword_1.png::CompressedTexture2D::6170263101479167095::1697171017::1697173914::1::::<><>::
+::res://sprites/decor/::1697171017
+barrel.png::CompressedTexture2D::3292712516369463669::1697171017::1697173914::1::::<><>::
+bookshelf.png::CompressedTexture2D::7583165359258400119::1697171017::1697173914::1::::<><>::
+table.png::CompressedTexture2D::2959756015683742718::1697171017::1697173914::1::::<><>::
+table_2.png::CompressedTexture2D::1654450314772158441::1697171017::1697173914::1::::<><>::
+::res://sprites/explosion/::1697171017
+enemy_afterdead_explosion_anim_f0.png::CompressedTexture2D::580751655754235984::1697171017::1697173914::1::::<><>::
+enemy_afterdead_explosion_anim_f1.png::CompressedTexture2D::7106164349046725513::1697171017::1697173914::1::::<><>::
+enemy_afterdead_explosion_anim_f2.png::CompressedTexture2D::8354968484597782033::1697171017::1697173914::1::::<><>::
+enemy_afterdead_explosion_anim_f3.png::CompressedTexture2D::8479878880624403735::1697171017::1697173914::1::::<><>::
+::res://sprites/hit/::1697171017
+hit_effect_anim_f0.png::CompressedTexture2D::5239902604076794651::1697171017::1697173914::1::::<><>::
+hit_effect_anim_f1.png::CompressedTexture2D::8428818007261157892::1697171017::1697173914::1::::<><>::
+hit_effect_anim_f2.png::CompressedTexture2D::2917407790492703695::1697171017::1697173914::1::::<><>::
+::res://sprites/penta/::1697171017
+penta (2).png::CompressedTexture2D::2392167118528389403::1697171017::1697173914::1::::<><>::
+penta (3).png::CompressedTexture2D::1503587153477580379::1697171017::1697173914::1::::<><>::
+penta (5).png::CompressedTexture2D::3265613885343470002::1697171017::1697173914::1::::<><>::
+penta (6).png::CompressedTexture2D::1630184846168205750::1697171017::1697173914::1::::<><>::
+penta (7).png::CompressedTexture2D::2608792290870820027::1697171017::1697173914::1::::<><>::
+penta (8).png::CompressedTexture2D::2002091715536515617::1697171017::1697173914::1::::<><>::
+::res://sprites/penta/good/::1697171017
+penta (1).png::CompressedTexture2D::3584421497906740803::1697171017::1697173914::1::::<><>::
+penta (4).png::CompressedTexture2D::5566330291089952971::1697171017::1697173914::1::::<><>::
+::res://sprites/sheets/::1697171017
+chest_spritesheet.png::CompressedTexture2D::3483662920331274443::1697171017::1697173914::1::::<><>::
+enemy_afterdead_explosion_anim_spritesheet.png::CompressedTexture2D::8891750182067776095::1697171017::1697173914::1::::<><>::
+full tilemap.png::CompressedTexture2D::4773480307083930152::1697171017::1697173914::1::::<><>::
+goblin_idle_spritesheet.png::CompressedTexture2D::7470076616694158744::1697171017::1697173914::1::::<><>::
+goblin_run_spritesheet.png::CompressedTexture2D::3710335943738214350::1697171017::1697173914::1::::<><>::
+hit_effect_anim_spritesheet.png::CompressedTexture2D::758691977557496127::1697171017::1697173914::1::::<><>::
+knight_idle_spritesheet.png::CompressedTexture2D::2830960405455805740::1697171017::1697173914::1::::<><>::
+knight_run_spritesheet.png::CompressedTexture2D::2953248883849216846::1697171017::1697173914::1::::<><>::
+slash_effect_anim_spritesheet.png::CompressedTexture2D::1188698818346405861::1697171017::1697173914::1::::<><>::
+slime_idle_spritesheet.png::CompressedTexture2D::2531134336498526049::1697171017::1697173914::1::::<><>::
+slime_run_spritesheeet.png::CompressedTexture2D::3040807609045416226::1697171017::1697173914::1::::<><>::
+::res://themes/::1697171017
+background.gdshader::Shader::-1::1697171017::0::1::::<><>::
+mainTileSet.tres::TileSet::8129593260452777156::1697171017::0::1::::<><>::uid://caakr14tc8e3y::::res://sprites/sheets/full tilemap.png
